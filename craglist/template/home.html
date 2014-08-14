@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Craiglist Rating</title>
+    </head>
+    <body>
+        <!--<form method="get" action="/search/">-->
+        <!--</form>-->
+        {% if results %}
+            <ul>
+                {% for item in results %}
+                <li><a href="{{ item.url }}">{{item.date}} --- {{ item.title}}</a>   ---  <font size="-1">{{ item.dist }} km <span class="p"> {{ item.rating }} </span></font> </li>
+                <!--<p> {{ item.line }} </p>-->
+                {% endfor %}
+            </ul>
+        {% endif %}
+</body>
+</html>
